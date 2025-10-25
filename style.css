@@ -1,0 +1,120 @@
+/* Pengaturan dasar untuk seluruh halaman */
+body {
+    font-family: Arial, sans-serif; /* Mengatur jenis font */
+    margin: 0; /* Menghilangkan margin bawaan browser */
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Warna latar belakang abu-abu muda */
+    color: #333; /* Warna teks utama */
+}
+
+/* Wadah umum untuk memberi jarak di samping */
+.container {
+    width: 80%;
+    margin: 20px auto; /* 20px atas-bawah, 'auto' kiri-kanan (membuatnya di tengah) */
+    padding: 20px;
+    background-color: #ffffff; /* Latar belakang putih */
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Bayangan halus */
+}
+
+/* --- Header dan Navigasi --- */
+header {
+    background-color: #333; /* Latar belakang header hitam */
+    color: #fff; /* Teks putih */
+    padding: 20px 0;
+    border-bottom: 3px solid #007BFF; /* Garis aksen biru */
+}
+
+header nav {
+    width: 80%;
+    margin: 0 auto; /* Posisikan di tengah */
+    display: flex; /* Menggunakan flexbox untuk layout */
+    justify-content: space-between; /* Memberi jarak antara logo dan menu */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+header .logo p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Menghilangkan titik-titik list */
+}
+
+header nav ul li {
+    display: inline-block; /* Membuat item menu jadi horizontal */
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none; /* Menghilangkan garis bawah link */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transisi halus saat hover */
+}
+
+header nav ul li a:hover {
+    color: #007BFF; /* Warna link berubah jadi biru saat disentuh mouse */
+}
+
+/* --- Bagian Hero (Sambutan) --- */
+.hero {
+    background-color: #007BFF; /* Latar biru */
+    color: #fff; /* Teks putih */
+    text-align: center;
+    padding: 60px 20px;
+}
+.hero h2 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* --- Bagian Project --- */
+.project-grid {
+    display: grid; /* Menggunakan CSS Grid untuk layout project */
+    /* Membuat 2 kolom di layar besar, 1 kolom di layar kecil */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Jarak antar kartu project */
+}
+
+.project-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Memastikan gambar tidak keluar dari kartu */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Efek sedikit terangkat saat hover */
+}
+
+.project-card img {
+    width: 100%; /* Membuat gambar responsif */
+    height: auto;
+    display: block;
+}
+
+.project-card h4, .project-card p {
+    padding: 0 15px 15px 15px; /* Jarak untuk teks di dalam kartu */
+    margin: 10px 0;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #333;
+    color: #fff;
+}
