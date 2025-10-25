@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Hery Mangalik - UI/UX Designer</title>
+    <title>Hery Mangalik - Portofolio UI/UX</title>
+    
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
         <nav>
-            <div class="logo">
-                <h1>Hery Mangalik</h1>
-                <p>NIM: H071231013</p>
-            </div>
+            <a href="#home" class="nav-logo">Hery Mangalik</a>
             <ul>
-                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#process">Proses</a></li>
                 <li><a href="#projects">Project</a></li>
                 <li><a href="#contact">Kontak</a></li>
             </ul>
@@ -23,48 +26,104 @@
     </header>
 
     <main>
-        <section class="hero">
-            <h2>Selamat Datang di Portofolio Saya</h2>
-            <p>Seorang desainer UI/UX yang fokus pada solusi desain yang bersih dan fungsional.</p>
+        <section id="home">
+            <div class="hero-content">
+                <h1>Hery Mangalik</h1>
+                <p class="subtitle">NIM: H071231013</p>
+                <h2>Desainer UI/UX & Produk</h2>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fa-brands fa-dribbble"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-behance"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:emailkamu@example.com"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
         </section>
 
         <section id="about" class="container">
             <h3>Tentang Saya</h3>
-            <p>
-                Halo! Saya Hery Mangalik, seorang mahasiswa dengan minat besar pada Desain Antarmuka (UI) dan 
-                Pengalaman Pengguna (UX). Saya senang memecahkan masalah desain yang kompleks 
-                menjadi solusi yang intuitif dan mudah digunakan.
-            </p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Halo! Saya Hery, seorang desainer UI/UX yang bersemangat dalam menciptakan 
+                        pengalaman digital yang intuitif dan berpusat pada pengguna.
+                    </p>
+                    <p>
+                        Saya percaya bahwa desain yang baik adalah jembatan antara teknologi yang kompleks 
+                        dan kebutuhan manusia yang sederhana. Fokus saya adalah pada desain yang bersih, 
+                        fungsional, dan memberikan dampak positif.
+                    </p>
+                </div>
+                <img src="profile.jpg" alt="Foto Profil Hery Mangalik" class="profile-pic">
+            </div>
+        </section>
+
+        <section id="process" class="container">
+            <h3>Proses Desain Saya</h3>
+            <div class="process-grid">
+                <div class="process-step">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <h4>1. Discover (Penemuan)</h4>
+                    <p>Memahami masalah melalui riset pengguna, wawancara, dan analisis kompetitor.</p>
+                </div>
+                <div class="process-step">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h4>2. Define (Pendefinisian)</h4>
+                    <p>Mensintesis temuan untuk membuat persona pengguna, user flow, dan mendefinisikan masalah inti.</p>
+                </div>
+                <div class="process-step">
+                    <i class="fa-solid fa-palette"></i>
+                    <h4>3. Design (Perancangan)</h4>
+                    <p>Membuat wireframe, prototipe interaktif (di Figma), dan merancang antarmuka visual (UI).</p>
+                </div>
+                <div class="process-step">
+                    <i class="fa-solid fa-check-double"></i>
+                    <h4>4. Deliver (Pengiriman)</h4>
+                    <p>Melakukan usability testing, mengumpulkan umpan balik, dan menyerahkan aset desain final ke developer.</p>
+                </div>
+            </div>
         </section>
 
         <section id="projects" class="container">
-            <h3>Project UI/UX Saya</h3>
+            <h3>Project Unggulan</h3>
             <div class="project-grid">
                 
                 <div class="project-card">
-                    <img src="project1.jpg" alt="Gambar Project 1"> 
-                    <h4>Judul Project 1</h4>
-                    <p>Deskripsi singkat tentang project ini, tantangannya, dan solusi yang kamu berikan.</p>
+                    <img src="project1.png" alt="Gambar Project 1">
+                    <div class="project-info">
+                        <h4>Judul Project 1 (Misal: Aplikasi Mobile Banking)</h4>
+                        <p>Sebuah studi kasus untuk mendesain ulang alur registrasi agar lebih mudah bagi pengguna baru.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn">Lihat Studi Kasus</a>
+                            <a href="#" class="btn-secondary">Lihat Figma</a>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="project-card">
-                    <img src="project2.jpg" alt="Gambar Project 2">
-                    <h4>Judul Project 2</h4>
-                    <p>Deskripsi singkat tentang project kedua kamu.</p>
+                    <img src="project2.png" alt="Gambar Project 2">
+                    <div class="project-info">
+                        <h4>Judul Project 2 (Misal: Website E-commerce)</h4>
+                        <p>Merancang dashboard penjual untuk membantu mereka melacak inventaris dan penjualan dengan efisien.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn">Lihat Studi Kasus</a>
+                            <a href="#" class="btn-secondary">Live Prototype</a>
+                        </div>
+                    </div>
                 </div>
                 
                 </div>
         </section>
 
         <section id="contact" class="container">
-            <h3>Hubungi Saya</h3>
-            <p>Kamu bisa menghubungi saya melalui email:</p>
-            <a href="mailto:emailkamu@contoh.com">emailkamu@contoh.com</a>
+            <h3>Tertarik Bekerja Sama?</h3>
+            <p>Ayo terhubung dan diskusikan bagaimana kita bisa menciptakan sesuatu yang hebat.</p>
+            <a href="mailto:emailkamu@example.com" class="btn btn-contact">Kirim Email</a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Hery Mangalik. Dibuat dengan ❤️</p>
+        <p>&copy; 2025 Hery Mangalik. Dibuat dengan inspirasi dan kode.</p>
     </footer>
 
 </body>
