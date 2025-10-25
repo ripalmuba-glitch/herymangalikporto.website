@@ -1,120 +1,308 @@
-/* Pengaturan dasar untuk seluruh halaman */
+/* --- Pengaturan Global & Variabel Warna --- */
+:root {
+    /* Palet warna "Dark Mode" yang modern */
+    --bg-dark: #121212;      /* Hitam pekat (latar belakang) */
+    --bg-card: #1E1E1E;      /* Abu-abu sangat gelap (untuk kartu) */
+    --primary-color: #00A3FF; /* Biru cerah (aksen, mirip referensi) */
+    --text-light: #E0E0E0;   /* Putih gading (teks utama) */
+    --text-muted: #888888;   /* Abu-abu (teks sekunder) */
+    --border-color: #333333; /* Warna border halus */
+}
+
 body {
-    font-family: Arial, sans-serif; /* Mengatur jenis font */
-    margin: 0; /* Menghilangkan margin bawaan browser */
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+    margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4; /* Warna latar belakang abu-abu muda */
-    color: #333; /* Warna teks utama */
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    scroll-behavior: smooth; /* Efek scroll halus saat klik menu */
 }
 
-/* Wadah umum untuk memberi jarak di samping */
+main {
+    padding-top: 70px; /* Memberi jarak agar konten tidak tertutup header */
+}
+
+/* Wadah (container) umum */
 .container {
-    width: 80%;
-    margin: 20px auto; /* 20px atas-bawah, 'auto' kiri-kanan (membuatnya di tengah) */
+    width: 85%;
+    max-width: 1100px;
+    margin: 60px auto; /* Jarak atas/bawah 60px, tengah otomatis */
     padding: 20px;
-    background-color: #ffffff; /* Latar belakang putih */
-    border-radius: 8px; /* Sudut melengkung */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Bayangan halus */
 }
 
-/* --- Header dan Navigasi --- */
+h1, h2, h3, h4 {
+    color: #ffffff; /* Judul lebih putih cerah */
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 2.5rem; /* 2.5x ukuran font dasar */
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+    display: inline-block; /* Agar border pas dengan teks */
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+p {
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+/* --- 1. Header / Navigasi (Efek Kaca) --- */
 header {
-    background-color: #333; /* Latar belakang header hitam */
-    color: #fff; /* Teks putih */
-    padding: 20px 0;
-    border-bottom: 3px solid #007BFF; /* Garis aksen biru */
+    position: fixed; /* Tetap di atas saat di-scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    /* Ini adalah efek "Glassmorphism" (Kaca) */
+    background-color: rgba(30, 30, 30, 0.7); /* Abu-abu transparan */
+    backdrop-filter: blur(10px); /* Efek blur pada konten di belakangnya */
+    -webkit-backdrop-filter: blur(10px); /* Untuk Safari */
+    
+    border-bottom: 1px solid var(--border-color);
 }
 
 header nav {
-    width: 80%;
-    margin: 0 auto; /* Posisikan di tengah */
-    display: flex; /* Menggunakan flexbox untuk layout */
-    justify-content: space-between; /* Memberi jarak antara logo dan menu */
-    align-items: center; /* Menyelaraskan item secara vertikal */
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Logo di kiri, menu di kanan */
+    align-items: center;
+    height: 70px;
 }
 
-header .logo h1 {
-    margin: 0;
-    font-size: 24px;
-}
-header .logo p {
-    margin: 0;
-    font-size: 14px;
-    color: #ccc;
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 header nav ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none; /* Menghilangkan titik-titik list */
+    display: flex;
 }
 
 header nav ul li {
-    display: inline-block; /* Membuat item menu jadi horizontal */
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 header nav ul li a {
-    color: #fff;
-    text-decoration: none; /* Menghilangkan garis bawah link */
-    font-weight: bold;
-    transition: color 0.3s ease; /* Transisi halus saat hover */
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent; /* Garis bawah transparan */
 }
 
 header nav ul li a:hover {
-    color: #007BFF; /* Warna link berubah jadi biru saat disentuh mouse */
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color); /* Garis bawah muncul saat hover */
 }
 
-/* --- Bagian Hero (Sambutan) --- */
-.hero {
-    background-color: #007BFF; /* Latar biru */
-    color: #fff; /* Teks putih */
+/* --- 2. Bagian Home (Hero) --- */
+#home {
+    height: 100vh; /* Tinggi 100% dari layar */
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 60px 20px;
-}
-.hero h2 {
-    margin: 0;
-    font-size: 36px;
+    padding: 0 20px;
+    background: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url('hero-bg.jpg'); /* Ganti hero-bg.jpg */
+    background-size: cover;
+    background-position: center;
 }
 
-/* --- Bagian Project --- */
+#home h1 {
+    font-size: 4rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+#home .subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin: 10px 0;
+}
+
+#home h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 10px 0 30px 0;
+}
+
+.social-links a {
+    color: var(--text-light);
+    font-size: 1.8rem; /* Ukuran ikon */
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px); /* Ikon sedikit terangkat */
+}
+
+/* --- 3. Bagian Tentang Saya --- */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Jarak antara teks dan gambar */
+}
+
+.about-text {
+    flex: 2; /* Teks mengambil 2/3 bagian */
+}
+
+.profile-pic {
+    flex: 1; /* Gambar mengambil 1/3 bagian */
+    width: 250px;
+    height: 250px;
+    object-fit: cover; /* Agar gambar tidak gepeng */
+    border-radius: 50%; /* Membuat gambar jadi bulat */
+    border: 5px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0, 163, 255, 0.2);
+}
+
+/* --- 4. Bagian Proses Desain --- */
+.process-grid {
+    display: grid;
+    /* Membuat 4 kolom di layar besar, 2 di tablet, 1 di HP */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 163, 255, 0.1);
+}
+
+.process-step i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.process-step h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* --- 5. Bagian Project --- */
 .project-grid {
-    display: grid; /* Menggunakan CSS Grid untuk layout project */
-    /* Membuat 2 kolom di layar besar, 1 kolom di layar kecil */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px; /* Jarak antar kartu project */
+    display: grid;
+    grid-template-columns: 1fr; /* 1 kolom di HP */
+    gap: 30px;
+}
+
+/* Layar lebih besar (tablet ke atas) */
+@media (min-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+    }
 }
 
 .project-card {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    overflow: hidden; /* Memastikan gambar tidak keluar dari kartu */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    overflow: hidden; /* Agar gambar tidak keluar dari sudut */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px); /* Efek sedikit terangkat saat hover */
+    transform: translateY(-5px);
 }
 
 .project-card img {
-    width: 100%; /* Membuat gambar responsif */
-    height: auto;
+    width: 100%;
+    height: 250px; /* Tinggi gambar konsisten */
+    object-fit: cover;
     display: block;
 }
 
-.project-card h4, .project-card p {
-    padding: 0 15px 15px 15px; /* Jarak untuk teks di dalam kartu */
-    margin: 10px 0;
+.project-info {
+    padding: 25px;
 }
 
-/* --- Footer --- */
+.project-info h4 {
+    font-size: 1.4rem;
+}
+
+.project-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+/* --- Tombol (Button) --- */
+.btn, .btn-secondary {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Tombol Utama (Primary) */
+.btn {
+    background-color: var(--primary-color);
+    color: #121212; /* Teks hitam agar kontras di tombol biru */
+}
+.btn:hover {
+    background-color: #ffffff;
+}
+
+/* Tombol Sekunder (Garis) */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: #121212;
+}
+
+/* --- 6. Kontak & 7. Footer --- */
+#contact {
+    text-align: center;
+}
+
+.btn-contact {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    margin-top: 20px;
+}
+
 footer {
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    background-color: #333;
-    color: #fff;
+    padding: 30px;
+    margin-top: 40px;
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
 }
