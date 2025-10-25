@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus UX: Alur Checkout - Blog UI/UX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">HERY MANGALIK</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-header" style="padding: 180px 0 60px 0;">
+            <div class="container">
+                <p class="meta" style="color: var(--color-primary); font-family: var(--font-heading); font-weight: 600;">KATEGORI: STUDI KASUS</p>
+                <h1 style="font-size: 3rem;">Studi Kasus UX: Merancang Ulang Alur Checkout E-Commerce</h1>
+            </div>
+        </section>
+
+        <section class="article-full">
+            <div class="article-full-content">
+                
+                <img src="image copy 2.png" alt="Header Artikel" class="header-image">
+                <p class="meta">Dipublikasikan pada 15 Oktober 2025</p>
+
+                <h3>Pendahuluan: Latar Belakang Proyek</h3>
+                <p>
+                    Studi kasus ini berfokus pada perancangan ulang (redesign) alur checkout untuk aplikasi e-commerce fiktif bernama "TokoKita". Alur checkout adalah salah satu bagian paling krusial dari e-commerce, namun seringkali menjadi tempat di mana pengguna paling banyak "jatuh" atau meninggalkan keranjang mereka.
+                </p>
+
+                <h3>Tantangan: Masalah yang Dihadapi</h3>
+                <p>
+                    Tim "TokoKita" datang dengan satu masalah besar: <strong>Tingkat Abandemen Keranjang (Cart Abandonment Rate) yang sangat tinggi, mencapai 75%</strong>. Ini berarti 3 dari 4 pengguna yang sudah memasukkan barang ke keranjang, gagal menyelesaikan pembayaran.
+                </p>
+                <p>
+                    Tujuan proyek ini jelas: Mengidentifikasi masalah dalam alur checkout yang ada dan merancangnya ulang untuk mengurangi friksi, meningkatkan kepercayaan, dan pada akhirnya, menaikkan tingkat konversi penjualan.
+                </p>
+
+                <h3>Proses Desain: Pendekatan Kami</h3>
+                <p>
+                    Kami menggunakan proses Design Thinking yang berpusat pada pengguna, yang terdiri dari 4 tahap utama:
+                </p>
+
+                <h4>Tahap 1: Riset & Analisis (Empathize & Define)</h4>
+                <p>
+                    Kami tidak bisa memperbaiki apa yang tidak kami pahami. Langkah pertama adalah mencari tahu *mengapa* pengguna pergi.
+                </p>
+                <ul>
+                    <li><strong>Analisis Data:</strong> Kami melihat data analytics dan menemukan bahwa 60% pengguna keluar dari halaman 'Pengisian Alamat'.</li>
+                    <li><strong>Usability Testing (Desain Lama):</strong> Kami meminta 5 pengguna untuk mencoba membeli barang menggunakan aplikasi yang ada. Kami mengamati mereka secara langsung.</li>
+                </ul>
+
+                <h4>Tahap 2: Temuan Utama ('Pain Points')</h4>
+                <p>
+                    Dari hasil riset, kami menemukan 3 masalah utama (pain points) yang membuat pengguna frustrasi:
+                </p>
+                <ol>
+                    <li><strong>Paksaan Membuat Akun:</strong> Pengguna dipaksa untuk 'Login' atau 'Daftar' sebelum bisa checkout. Banyak pengguna baru yang tidak mau repot dan langsung keluar.</li>
+                    <li><strong>Formulir yang Mengerikan:</strong> Halaman pengisian alamat dan data diri digabung menjadi satu formulir yang sangat panjang dan mengintimidasi.</li>
+                    <li><strong>Biaya Tersembunyi:</strong> Biaya ongkos kirim dan admin baru muncul di halaman terakhir (pembayaran), membuat pengguna merasa "terjebak" atau "dibohongi".</li>
+                </ol>
+
+                <h4>Tahap 3: Ideasi & Solusi Desain (Ideate & Prototype)</h4>
+                <p>
+                    Berdasarkan temuan tersebut, kami merancang solusi untuk setiap masalah:
+                </p>
+                <ul>
+                    <li><strong>Solusi untuk Masalah #1:</strong> Menambahkan opsi <strong>"Lanjut sebagai Tamu" (Guest Checkout)</strong>. Pengguna bisa checkout tanpa membuat akun, dan kami menawarkan opsi membuat akun *setelah* pembayaran berhasil.</li>
+                    <li><strong>Solusi untuk Masalah #2:</strong> Memecah formulir menjadi 3 langkah logis (seperti *stepper*) yang jelas: <strong>1. Pengiriman</strong> -> <strong>2. Pembayaran</strong> -> <strong>3. Konfirmasi</strong>. Ini membuat prosesnya terasa lebih mudah dikelola.</li>
+                    <li><strong>Solusi untuk Masalah #3:</strong> Menampilkan estimasi ongkos kirim di halaman keranjang (sebelum checkout) dan menampilkan semua total biaya secara transparan di langkah pertama. Tidak ada lagi biaya kejutan.</li>
+                </ul>
+
+                <h4>Tahap 4: Validasi (Testing)</h4>
+                <p>
+                    Kami membuat prototipe interaktif dari alur checkout yang baru menggunakan Figma. Kami menguji ulang prototipe ini dengan 5 pengguna baru. Hasilnya, kelima pengguna berhasil menyelesaikan proses checkout tanpa kebingungan. Waktu rata-rata untuk checkout berkurang dari 3 menit menjadi 1 menit 15 detik.
+                </p>
+
+                <h3>Hasil & Kesimpulan</h3>
+                <p>
+                    Setelah alur checkout baru diimplementasikan oleh tim developer, "TokoKita" memantau hasilnya selama satu bulan.
+                </p>
+                <p>
+                    Hasilnya sangat signifikan:
+                </p>
+                <ul>
+                    <li>Tingkat Abandemen Keranjang (Cart Abandonment Rate) <strong>turun dari 75% menjadi 40%</strong>.</li>
+                    <li>Tingkat konversi penjualan <strong>meningkat sebesar 22%</strong>.</li>
+                </ul>
+                <p>
+                    Studi kasus ini membuktikan bahwa mendengarkan pengguna dan mengatasi 'pain points' mereka secara langsung dapat memberikan dampak bisnis yang nyata. Desain yang baik bukan hanya soal estetika, tapi soal memecahkan masalah.
+                </p>
+
+                <hr style="margin-top: 40px; border: 0; border-top: 1px solid var(--color-border);">
+                <a href="blog.html" class="btn-primary" style="margin-top: 30px; font-size: 0.9rem;">&larr; Kembali ke Daftar Blog</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Hery Mangalik. Dibuat dengan sepenuh hati.</p>
+    </footer>
+
+</body>
+</html>
