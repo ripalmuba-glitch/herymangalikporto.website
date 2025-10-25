@@ -16,12 +16,19 @@
     <header>
         <nav>
             <a href="#home" class="nav-logo">Hery Mangalik</a>
-            <ul>
+            
+            <ul id="nav-links">
                 <li><a href="#about">Tentang</a></li>
                 <li><a href="#process">Proses</a></li>
                 <li><a href="#projects">Project</a></li>
                 <li><a href="#contact">Kontak</a></li>
             </ul>
+            
+            <div class="hamburger-menu" id="hamburger-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
@@ -54,7 +61,7 @@
                         fungsional, dan memberikan dampak positif.
                     </p>
                 </div>
-                <img src="profile.jpg" alt="Foto Profil Hery Mangalik" class="profile-pic">
+                <img src="img/profil.png" alt="Foto Profil Hery Mangalik" class="profile-pic">
             </div>
         </section>
 
@@ -89,7 +96,7 @@
             <div class="project-grid">
                 
                 <div class="project-card">
-                    <img src="project1.png" alt="Gambar Project 1">
+                    <img src="img/1.png" alt="Gambar Project 1">
                     <div class="project-info">
                         <h4>Judul Project 1 (Misal: Aplikasi Mobile Banking)</h4>
                         <p>Sebuah studi kasus untuk mendesain ulang alur registrasi agar lebih mudah bagi pengguna baru.</p>
@@ -101,7 +108,7 @@
                 </div>
 
                 <div class="project-card">
-                    <img src="project2.png" alt="Gambar Project 2">
+                    <img src="img/2.jpg" alt="Gambar Project 2">
                     <div class="project-info">
                         <h4>Judul Project 2 (Misal: Website E-commerce)</h4>
                         <p>Merancang dashboard penjual untuk membantu mereka melacak inventaris dan penjualan dengan efisien.</p>
@@ -112,7 +119,7 @@
                     </div>
                 </div>
                 
-                </div>
+            </div>
         </section>
 
         <section id="contact" class="container">
@@ -125,6 +132,26 @@
     <footer>
         <p>&copy; 2025 Hery Mangalik. Dibuat dengan inspirasi dan kode.</p>
     </footer>
+
+    <script>
+        // Ambil elemen-elemen yang kita butuhkan
+        const hamburgerToggle = document.getElementById('hamburger-toggle');
+        const navLinks = document.getElementById('nav-links'); // Walaupun tidak langsung dipakai, good to keep
+        const body = document.body;
+        const links = document.querySelectorAll('#nav-links li a');
+
+        // 1. Fungsi untuk toggle (buka/tutup) menu saat hamburger di-klik
+        hamburgerToggle.addEventListener('click', () => {
+            body.classList.toggle('nav-open');
+        });
+
+        // 2. Fungsi untuk menutup menu saat salah satu link di-klik
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                body.classList.remove('nav-open');
+            });
+        });
+    </script>
 
 </body>
 </html>
