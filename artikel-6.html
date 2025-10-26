@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengenal API Testing: Jantung Aplikasi Modern - Blog UI/UX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">HM</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-header" style="padding: 180px 0 60px 0;">
+            <div class="container">
+                <p class="meta" style="color: var(--color-primary); font-family: var(--font-heading); font-weight: 600;">KATEGORI: TESTING TEKNIS</p>
+                <h1 style="font-size: 3rem;">Mengenal API Testing: Jantung Aplikasi Modern</h1>
+            </div>
+        </section>
+
+        <section class="article-full">
+            <div class="article-full-content">
+                
+                <img src="image copy 5.png" alt="Header Artikel" class="header-image">
+                <p class="meta">Dipublikasikan pada 26 Oktober 2025</p>
+
+                <h3>Apa Itu API Testing?</h3>
+                <p>
+                    <strong>API Testing</strong> adalah proses pengujian yang dilakukan pada <em>Application Programming Interface</em> (API) untuk memastikan bahwa API berfungsi sesuai dengan spesifikasi, dapat menangani berbagai skenario dengan benar, serta menghasilkan output yang benar ketika menerima input tertentu.
+                </p>
+                <p>
+                    Dalam aplikasi modern, API bertindak sebagai "jembatan" yang menghubungkan frontend (yang dilihat pengguna) dengan backend (server dan database). Menguji API sangat penting karena memastikan logika bisnis inti dari aplikasi berjalan dengan benar, terlepas dari bagaimana tampilan UI-nya.
+                </p>
+
+                <h3>Kenapa Pengujian API Itu Penting?</h3>
+                <p>
+                    Pengujian API memiliki banyak keunggulan dan sangat penting untuk kualitas sistem:
+                </p>
+                <ul>
+                    <li><strong>Memastikan Fungsionalitas:</strong> Memastikan API berfungsi sesuai spesifikasi dan menghasilkan output yang benar.</li>
+                    <li><strong>Deteksi Bug Lebih Awal:</strong> Meningkatkan keandalan sistem dengan mendeteksi bug sejak awal, bahkan sebelum UI selesai dibuat.</li>
+                    <li><strong>Menjamin Keamanan:</strong> Menjamin keamanan API dari akses tidak sah dan potensi celah keamanan.</li>
+                    <li><strong>Mengukur Performa:</strong> Mengukur performa API di bawah beban (load) untuk memastikan stabilitas aplikasi.</li>
+                    <li><strong>Mempercepat Pengembangan:</strong> Mempercepat siklus pengembangan melalui otomatisasi pengujian.</li>
+                    <li><strong>Memastikan Integrasi:</strong> Menjadi pondasi penting bagi integrasi antar sistem yang lancar.</li>
+                </ul>
+
+                <h3>Tools Populer untuk API Testing</h3>
+                <p>Ada banyak tools yang digunakan untuk API testing, namun dua yang paling terkenal adalah Postman dan SoapUI.</p>
+
+                <h4>1. Postman</h4>
+                <p>Postman adalah platform kolaboratif untuk pengembangan API dan sangat populer untuk pengujian API.</p>
+                <p><strong>Fitur Utama Postman:</strong></p>
+                <ul>
+                    <li>Mengirim request HTTP (GET, POST, PUT, DELETE, dll).</li>
+                    <li>Mengelola <em>environment</em> (misalnya, server development vs production).</li>
+                    <li>Menjalankan testing otomatis (menggunakan skrip).</li>
+                    <li>Menggunakan <em>Collections</em> untuk mengorganisir request.</li>
+                    <li>Membuat dokumentasi API dan <em>Mock Server</em>.</li>
+                </ul>
+
+                <h4>2. SoapUI</h4>
+                <p>SoapUI adalah tools yang kuat dan didedikasikan untuk pengujian layanan web, baik SOAP maupun REST.</p>
+                <p><strong>Fitur Utama SoapUI:</strong></p>
+                <ul>
+                    <li>Mendukung SOAP dan REST API.</li>
+                    <li>Bisa membuat functional testing, security testing, dan load testing.</li>
+                    <li>Mendukung <em>data-driven testing</em> (misalnya, impor data dari Excel atau database).</li>
+                </ul>
+
+                <h3>Anatomi Request dan Response API</h3>
+                <p>
+                    Pengujian API pada dasarnya adalah tentang mengirim 'Request' dan memvalidasi 'Response' yang kembali.
+                </p>
+
+                <h4>Anatomi Request API</h4>
+                <p>
+                    Request adalah permintaan yang dikirimkan dari klien (misalnya Postman) ke server untuk mengakses atau memanipulasi data. Komponen utamanya adalah:
+                </p>
+                <ul>
+                    <li><strong>Method:</strong> Jenis aksi yang ingin dilakukan (Contoh: GET untuk mengambil data, POST untuk mengirim data baru, PUT untuk memperbarui data, DELETE untuk menghapus data).</li>
+                    <li><strong>Endpoint (URL):</strong> Alamat server spesifik tempat request dikirim (Contoh: `https://api.example.com/users`).</li>
+                    <li><strong>Headers:</strong> Informasi tambahan tentang request (Contoh: `Content-Type: application/json`, `Authorization: Bearer [token]`).</li>
+                    <li><strong>Body:</strong> Data yang dikirim ke server, biasanya dalam format JSON (hanya digunakan untuk POST, PUT, PATCH).</li>
+                </ul>
+
+                <h4>Anatomi Response API</h4>
+                <p>
+                    Response adalah balasan yang diberikan oleh server setelah memproses request. Komponen utamanya adalah:
+                </p>
+                <ul>
+                    <li><strong>Status Code:</strong> Kode numerik yang menandakan hasil eksekusi. Ini adalah hal pertama yang harus diperiksa.
+                        <ul>
+                            <li><strong>2xx (Sukses):</strong> Misal, 200 OK (Berhasil), 201 Created (Data baru berhasil dibuat).</li>
+                            <li><strong>4xx (Client Error):</strong> Misal, 404 Not Found (Endpoint tidak ada), 401 Unauthorized (Token tidak valid), 400 Bad Request (Data yang dikirim salah).</li>
+                            <li><strong>5xx (Server Error):</strong> Misal, 500 Internal Server Error (Server mengalami masalah).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Body:</strong> Konten data yang diminta, biasanya dalam format JSON.</li>
+                    <li><strong>Headers:</strong> Informasi tambahan tentang response dari server.</li>
+                </ul>
+                
+
+                <hr style="margin-top: 40px; border: 0; border-top: 1px solid var(--color-border);">
+                <a href="blog.html" class="btn-primary" style="margin-top: 30px; font-size: 0.9rem;">&larr; Kembali ke Daftar Blog</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Hery Mangalik. Dibuat dengan sepenuh hati.</p>
+    </footer>
+
+</body>
+</html>

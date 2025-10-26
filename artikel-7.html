@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automasi Testing dengan Selenium WebDriver - Blog UI/UX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">HM</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-header" style="padding: 180px 0 60px 0;">
+            <div class="container">
+                <p class="meta" style="color: var(--color-primary); font-family: var(--font-heading); font-weight: 600;">KATEGORI: AUTOMATION</p>
+                <h1 style="font-size: 3rem;">Automasi Testing dengan Selenium WebDriver</h1>
+            </div>
+        </section>
+
+        <section class="article-full">
+            <div class="article-full-content">
+                
+                <img src="image copy 6.png" alt="Header Artikel" class="header-image">
+                <p class="meta">Dipublikasikan pada 26 Oktober 2025</p>
+
+                <h3>Apa itu Selenium?</h3>
+                <p>
+                    <strong>Selenium</strong> adalah sebuah framework <em>open-source</em> yang sangat populer dan digunakan secara luas untuk automasi browser.
+                </p>
+                <p>
+                    Tujuan utamanya adalah untuk menguji aplikasi web. Selenium memungkinkan developer dan tester untuk menulis skrip pengujian dalam berbagai bahasa pemrograman populer dan menjalankannya di berbagai browser utama seperti Chrome, Firefox, Edge, dan Safari.
+                </p>
+
+                <h3>Apa itu Selenium WebDriver?</h3>
+                <p>
+                    <strong>WebDriver</strong> adalah komponen inti dari Selenium modern. WebDriver berfungsi sebagai penghubung (atau jembatan) antara kode skrip pengujian kita dengan browser yang sebenarnya.
+                </p>
+                <p>
+                    Alih-alih menyuntikkan JavaScript ke dalam browser, WebDriver menggunakan API asli browser untuk mengontrolnya seolah-olah seorang pengguna nyata yang melakukannya. WebDriver inilah yang bertugas menjalankan perintah seperti klik, input teks, navigasi, dan validasi elemen di halaman web.
+                </p>
+
+                <h3>Kenapa Harus Menggunakan Selenium?</h3>
+                <p>
+                    Meskipun banyak tools baru bermunculan, Selenium tetap menjadi standar industri karena beberapa alasan kuat:
+                </p>
+                <ul>
+                    <li><strong>Open-Source dan Gratis:</strong> Tidak ada biaya lisensi untuk menggunakan Selenium.</li>
+                    <li><strong>Mendukung Banyak Bahasa:</strong> Kamu bisa menulis skrip tes menggunakan bahasa yang sudah kamu kuasai, seperti Python, Java, C#, atau JavaScript.</li>
+                    <li><strong>Multi-Platform:</strong> Skrip yang sama dapat berjalan di berbagai sistem operasi seperti Windows, macOS, dan Linux.</li>
+                    <li><strong>Multi-Browser:</strong> Mendukung semua browser modern utama (Chrome, Firefox, Edge, Safari).</li>
+                    <li><strong>Integrasi:</strong> Dapat dengan mudah diintegrasikan dengan framework testing populer lainnya (seperti Pytest, JUnit, TestNG) untuk manajemen tes dan pelaporan.</li>
+                    <li><strong>Komunitas Besar:</strong> Memiliki komunitas pengguna yang sangat besar dan dokumentasi yang lengkap, sehingga mudah mencari solusi jika menemukan masalah.</li>
+                </ul>
+
+                <h3>Contoh Sederhana Test Case Selenium</h3>
+                <p>
+                    Berikut adalah contoh tabel Test Case untuk menguji fungsionalitas login di sebuah website. Skrip Selenium akan ditulis untuk mengotomatisasi langkah-langkah ini.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Deskripsi</th>
+                            <th>Steps (Langkah-langkah)</th>
+                            <th>Expected Result (Hasil Diharapkan)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TC-001</td>
+                            <td>Login sukses</td>
+                            <td>Input 'standard_user' & 'secret_sauce' → Klik Login</td>
+                            <td>Masuk ke halaman inventory</td>
+                        </tr>
+                        <tr>
+                            <td>TC-002</td>
+                            <td>Login gagal (user salah)</td>
+                            <td>Input user salah → Klik Login</td>
+                            <td>Muncul pesan error</td>
+                        </tr>
+                        <tr>
+                            <td>TC-003</td>
+                            <td>Tambah produk ke cart</td>
+                            <td>Login sukses → Klik "Add to cart"</td>
+                            <td>Icon Cart bertambah 1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+
+                <hr style="margin-top: 40px; border: 0; border-top: 1px solid var(--color-border);">
+                <a href="blog.html" class="btn-primary" style="margin-top: 30px; font-size: 0.9rem;">&larr; Kembali ke Daftar Blog</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Hery Mangalik. Dibuat dengan sepenuh hati.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Scenario, Test Case, dan Bug Report - Blog UI/UX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">HM</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-header" style="padding: 180px 0 60px 0;">
+            <div class="container">
+                <p class="meta" style="color: var(--color-primary); font-family: var(--font-heading); font-weight: 600;">KATEGORI: MANAJEMEN TESTING</p>
+                <h1 style="font-size: 3rem;">Test Scenario, Test Case, dan Bug Report</h1>
+            </div>
+        </section>
+
+        <section class="article-full">
+            <div class="article-full-content">
+                
+                <img src="image copy 3.png" alt="Header Artikel" class="header-image">
+                <p class="meta">Dipublikasikan pada 26 Oktober 2025</p>
+
+                <h3>Overview</h3>
+                <p>
+                    Test scenario, test case, dan bug report adalah tiga elemen penting dalam proses pengujian perangkat lunak. Ketiganya saling melengkapi untuk memastikan aplikasi berjalan sesuai harapan dan bebas dari kesalahan.
+                </p>
+
+                <h3>Test Scenario vs Test Case</h3>
+                <p>Perbedaan mendasar keduanya adalah pada pertanyaannya:</p>
+                <ul>
+                    <li><strong>Test Scenario:</strong> Menjawab pertanyaan, "APA YANG HARUS DIUJI?". Ini adalah gambaran umum apa yang diuji untuk memastikan fungsi aplikasi sesuai kebutuhan.</li>
+                    <li><strong>Test Case:</strong> Menjawab pertanyaan, "BAGAIMANA MELAKUKAN PENGUJIAN?". Ini adalah langkah detail pengujian, termasuk input, proses, dan hasil yang diharapkan.</li>
+                </ul>
+
+                <h3>Template Test Scenario</h3>
+                <p>Test scenario biasanya cukup sederhana, menjelaskan fitur yang diuji.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ID Scenario</td>
+                            <td>Nomor unik skenario</td>
+                        </tr>
+                        <tr>
+                            <td>Deskripsi</td>
+                            <td>Ringkasan skenario pengujian</td>
+                        </tr>
+                        <tr>
+                            <td>Modul/Fitur</td>
+                            <td>Modul atau fitur yang diuji</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Template Test Case</h3>
+                <p>Test case jauh lebih detail dan berisi langkah-langkah spesifik.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ID Test Case</td>
+                            <td>Nomor unik test case</td>
+                        </tr>
+                        <tr>
+                            <td>Deskripsi</td>
+                            <td>Ringkasan singkat tentang pengujian</td>
+                        </tr>
+                        <tr>
+                            <td>Precondition</td>
+                            <td>Kondisi awal sebelum pengujian</td>
+                        </tr>
+                        <tr>
+                            <td>Test Steps</td>
+                            <td>Langkah-langkah detail pengujian</td>
+                        </tr>
+                        <tr>
+                            <td>Test Data</td>
+                            <td>Data yang digunakan untuk pengujian</td>
+                        </tr>
+                        <tr>
+                            <td>Expected Result</td>
+                            <td>Hasil yang diharapkan sesuai requirement</td>
+                        </tr>
+                        <tr>
+                            <td>Actual Result</td>
+                            <td>Hasil aktual yang muncul setelah pengujian</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td>Lulus/Gagal (Pass/Fail)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Bug Report</h3>
+                <p>
+                    Saat <em>Actual Result</em> tidak sama dengan <em>Expected Result</em>, saat itulah kita menemukan "bug". Bug Report adalah laporan formal mengenai kesalahan atau masalah pada sistem.
+                </p>
+                <p>
+                    Saat melaporkan bug, penting untuk menentukan tingkat keparahan (Severity) dan prioritas (Priority).
+                </p>
+
+                <h4>Bug Severity (Tingkat Keparahan)</h4>
+                <p>Ini adalah ukuran dampak bug pada fungsi software.</p>
+                <ul>
+                    <li><strong>Critical:</strong> Menyebabkan kegagalan total pada sistem atau fungsionalitas utama. Aplikasi tidak dapat digunakan atau data rusak.</li>
+                    <li><strong>Major (High):</strong> Menyebabkan fungsionalitas utama tidak bekerja dengan benar, tetapi tidak menyebabkan sistem crash total.</li>
+                    <li><strong>Minor (Medium):</strong> Bug yang tidak memengaruhi fungsionalitas utama, tetapi dapat menyebabkan ketidaknyamanan bagi pengguna.</li>
+                    <li><strong>Low:</strong> Bug yang tidak mengakibatkan kerusakan pada sistem.</li>
+                </ul>
+
+                <h4>Bug Priority (Prioritas Perbaikan)</h4>
+                <p>Ini adalah ukuran seberapa mendesak bug tersebut harus diperbaiki, biasanya ditentukan oleh manajer.</p>
+                <ul>
+                    <li><strong>P1 - (Urgent/Critical):</strong> Bug yang harus segera diperbaiki karena memblokir fungsionalitas utama atau menyebabkan sistem crash.</li>
+                    <li><strong>P2 - High:</strong> Bug penting yang harus diperbaiki secepatnya karena memengaruhi banyak pengguna, tetapi tidak se-mendesak P1.</li>
+                    <li><strong>P3 - Medium:</strong> Bug yang bisa diperbaiki di siklus rilis berikutnya. Tidak memengaruhi fungsionalitas inti.</li>
+                    <li><strong>P4 - Low:</strong> Bug minor atau kosmetik yang bisa diperbaiki kapan saja.</li>
+                </ul>
+
+                <h3>Contoh Format Bug Report</h3>
+                <p>Berikut adalah contoh format laporan bug yang baik:</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Bug Title</th>
+                            <td>Perhitungan BMI salah saat input berat 60kg dan tinggi 170cm</td>
+                        </tr>
+                        <tr>
+                            <th>Bug ID</th>
+                            <td>BMI-001</td>
+                        </tr>
+                        <tr>
+                            <th>Step to reproduce</th>
+                            <td>1. Buka aplikasi BMI 2. Masukkan Berat = 60 3. Masukkan Tinggi = 170 4. Klik tombol "Hitung"</td>
+                        </tr>
+                        <tr>
+                            <th>Actual Result</th>
+                            <td>Hasil BMI = 12.5</td>
+                        </tr>
+                        <tr>
+                            <th>Expected Result</th>
+                            <td>Hasil BMI seharusnya = 20.8</td>
+                        </tr>
+                        <tr>
+                            <th>Severity</th>
+                            <td>Major (High)</td>
+                        </tr>
+                        <tr>
+                            <th>Priority</th>
+                            <td>P2 - High</td>
+                        </tr>
+                        <tr>
+                            <th>Assignee</th>
+                            <td>Developer</td>
+                        </tr>
+                        <tr>
+                            <th>Reporter</th>
+                            <td>SQA (Software Quality Assurance)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Cara Terbaik Menghindari Bug</h3>
+                <p>
+                    Cara terbaik untuk menghindari bug adalah dengan menerapkan praktik terbaik di seluruh siklus pengembangan, tidak hanya saat pengujian.
+                </p>
+                <ol>
+                    <li><strong>Pahami Persyaratan:</strong> Pastikan semua persyaratan dipahami dengan jelas oleh seluruh tim.</li>
+                    <li><strong>Unit Testing:</strong> Lakukan pengujian unit untuk mendeteksi bug di tahap awal pengembangan.</li>
+                    <li><strong>Code Review:</strong> Minta pengembang lain meninjau kode untuk menemukan kesalahan.</li>
+                    <li><strong>Rencana Pengujian:</strong> Buat test plan yang komprehensif.</li>
+                    <li><strong>Pengujian Otomatis:</strong> Manfaatkan automation testing untuk deteksi bug yang lebih cepat.</li>
+                    <li><strong>Kolaborasi Tim:</strong> Tingkatkan komunikasi antara pengembang dan penguji.</li>
+                </ol>
+                
+
+                <hr style="margin-top: 40px; border: 0; border-top: 1px solid var(--color-border);">
+                <a href="blog.html" class="btn-primary" style="margin-top: 30px; font-size: 0.9rem;">&larr; Kembali ke Daftar Blog</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Hery Mangalik. Dibuat dengan sepenuh hati.</p>
+    </footer>
+
+</body>
+</html>

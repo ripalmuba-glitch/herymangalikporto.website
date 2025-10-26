@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengantar Unit Testing: Coding Tanpa Khawatir - Blog UI/UX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">HM</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-header" style="padding: 180px 0 60px 0;">
+            <div class="container">
+                <p class="meta" style="color: var(--color-primary); font-family: var(--font-heading); font-weight: 600;">KATEGORI: CODING & TESTING</p>
+                <h1 style="font-size: 3rem;">Pengantar Unit Testing: Coding Tanpa Khawatir</h1>
+            </div>
+        </section>
+
+        <section class="article-full">
+            <div class="article-full-content">
+                
+                <img src="image copy 4.png" alt="Header Artikel" class="header-image">
+                <p class="meta">Dipublikasikan pada 26 Oktober 2025</p>
+
+                <h3>Apa Itu Unit Testing?</h3>
+                <p>
+                    <strong>Unit testing</strong> adalah salah satu jenis pengujian perangkat lunak yang berfokus pada pengujian <strong>unit-unit terkecil</strong> dalam sebuah sistem. Biasanya, ini mencakup pengujian function, method, dan class.
+                </p>
+                <p>
+                    Unit testing adalah pengujian paling awal yang dilakukan oleh developer sebelum melakukan pengujian lain, seperti integration test atau end-to-end test. Tujuannya adalah menguji komponen tanpa bergantung pada sistem lain dan hanya menguji *function by function*.
+                </p>
+                <p>
+                    Dalam piramida pengujian, Unit Testing berada di paling dasar, yang berarti paling cepat dan murah untuk dijalankan.
+                </p>
+
+                <h4>Analogi Unit Testing</h4>
+                <p>
+                    Bayangkan saat mengecek setiap komponen mobil (seperti baut, ban, mesin) secara terpisah sebelum dirakit menjadi satu mobil utuh. Jika setiap komponen lulus tes, kita bisa yakin mobil rakitan pasti berkualitas. Jika ada masalah, kita tahu itu bukan dari komponen dasar.
+                </p>
+
+                <h3>Kenapa Unit Testing Itu Penting?</h3>
+                <p>
+                    Unit testing membantu memastikan keandalan, kualitas, dan kemudahan pemeliharaan kode yang kita tulis. Manfaat utamanya adalah:
+                </p>
+                <ol>
+                    <li><strong>Mendeteksi Bug Lebih Awal:</strong> Menemukan masalah di level fungsi sebelum digabung ke kode utama.</li>
+                    <li><strong>Memberikan Dokumentasi Kode yang "Hidup":</strong> Test case berfungsi sebagai contoh cara menggunakan sebuah fungsi.</li>
+                    <li><strong>Mempermudah Perubahan dan Refactoring:</strong> Memungkinkan developer mengubah kode (refactor) dengan percaya diri, karena jika ada yang rusak, unit test akan gagal dan memberitahu kita.</li>
+                    <li><strong>Meningkatkan Kualitas Kode:</strong> Mendorong penulisan kode yang lebih modular dan rapi.</li>
+                    <li><strong>Menghemat Waktu dan Biaya:</strong> Bug yang ditemukan di tahap awal jauh lebih murah dan cepat diperbaiki.</li>
+                    <li><strong>Meningkatkan Kepercayaan Diri:</strong> Developer lebih percaya diri saat merilis kode baru.</li>
+                </ol>
+
+                <h3>Framework Populer</h3>
+                <p>Ada banyak framework untuk melakukan unit testing, berikut tiga yang paling populer di ekosistemnya masing-masing:</p>
+                <ul>
+                    <li><strong>JUNIT 5 (Java):</strong> Framework de facto untuk Java. Digunakan jika kita bekerja dengan Java atau bahasa berbasis JVM lainnya (Kotlin, Scala).</li>
+                    <li><strong>JEST (JavaScript):</strong> Framework buatan Meta yang efisien. Digunakan untuk React, Node.js, TypeScript, atau framework frontend modern lainnya.</li>
+                    <li><strong>PYTEST (Python):</strong> Sederhana, mudah dibaca, dan kuat. Digunakan untuk proyek Python apapun, dari skrip sederhana hingga data science dan API.</li>
+                </ul>
+
+                <h3>Pola Dasar: Arrange, Act, Assert (AAA)</h3>
+                <p>
+                    Pola AAA adalah pendekatan populer dalam penulisan unit test yang membagi setiap tes menjadi tiga bagian utama:
+                </p>
+                <ol>
+                    <li><strong>Arrange (Menyiapkan):</strong> Menyiapkan kondisi awal tes. Ini termasuk membuat objek atau data yang diperlukan.</li>
+                    <li><strong>Act (Melakukan):</strong> Menjalankan fungsi atau metode yang akan diuji.</li>
+                    <li><strong>Assert (Memverifikasi):</strong> Memverifikasi bahwa hasil dari tindakan (Act) sesuai dengan ekspektasi.</li>
+                </ol>
+
+                <h3>Contoh Kode Unit Testing</h3>
+                <p>Berikut adalah contoh penerapan unit testing menggunakan Pytest dan JUnit 5.</p>
+
+                <h4>Contoh 1: Pytest (Python)</h4>
+                <p>Kita memiliki kode untuk keranjang belanja (`ShoppingCart`) dan kita ingin mengujinya.</p>
+                <pre><code># Kode File: shopping_cart.py
+# (Transkripsi dari PDF)
+
+from typing import List
+
+class ShoppingCart:
+    def __init__(self, max_size: int) -> None:
+        self.items: List[str] = []
+        self.max_size = max_size
+
+    def add(self, item: str):
+        if len(self.items) == self.max_size:
+            raise OverflowError("cannot add more items")
+        self.items.append(item)
+
+    def get_items(self) -> List[str]:
+        return self.items
+    
+    def delete(self, item: str):
+        if item not in self.items:
+            raise ValueError("item not found")
+        self.items.remove(item)
+</code></pre>
+
+                <pre><code># Kode File Test: test_shopping_cart.py
+# (Transkripsi dari PDF)
+
+import pytest
+from shopping_cart import ShoppingCart
+
+@pytest.fixture
+def cart():
+    # ARRANGE (Fixture adalah bagian dari Arrange)
+    return ShoppingCart(5)
+
+def test_add(cart):
+    # ACT
+    cart.add("apple")
+    
+    # ASSERT
+    assert "apple" in cart.get_items()
+    assert len(cart.get_items()) == 1
+
+def test_add_overflow(cart):
+    # ARRANGE (mengisi keranjang)
+    for i in range(5):
+        cart.add("item")
+    
+    # ACT & ASSERT (menguji error)
+    with pytest.raises(OverflowError):
+        cart.add("item_terakhir")
+
+def test_delete_item(cart):
+    # ARRANGE
+    cart.add("apple")
+    cart.add("banana")
+    
+    # ACT
+    cart.delete("apple")
+    
+    # ASSERT
+    assert "apple" not in cart.get_items()
+    assert cart.get_items() == ["banana"]
+
+def test_delete_item_not_found(cart):
+    # ACT & ASSERT
+    with pytest.raises(ValueError):
+        cart.delete("grape")
+</code></pre>
+
+                <h4>Contoh 2: JUnit 5 (Java)</h4>
+                <p>Kita memiliki kode sederhana untuk Akun Bank (`BankAccount`).</p>
+                
+                <pre><code>// Kode File: BankAccount.java
+// (Transkripsi dari PDF)
+
+package com.example;
+
+public class BankAccount {
+    private int balance = 0;
+
+    public void deposit(int amount) {
+        balance += amount;
+    }
+
+    public void withdraw(int amount) {
+        if (amount > balance) {
+            throw new IllegalArgumentException("Saldo tidak cukup!");
+        }
+        balance -= amount;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+}
+</code></pre>
+
+                <pre><code>// Kode File Test: BankAccountTest.java
+// (Transkripsi dari PDF)
+
+package com.example;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class BankAccountTest {
+
+    @Test
+    void testDeposit() {
+        // ARRANGE
+        BankAccount account = new BankAccount();
+        
+        // ACT
+        account.deposit(100);
+        
+        // ASSERT
+        assertEquals(100, account.getBalance());
+    }
+
+    @Test
+    void testWithdrawSuccess() {
+        // ARRANGE
+        BankAccount account = new BankAccount();
+        account.deposit(200);
+        
+        // ACT
+        account.withdraw(50);
+        
+        // ASSERT
+        assertEquals(150, account.getBalance());
+    }
+
+    @Test
+    void testWithdrawInsufficientFunds() {
+        // ARRANGE
+        BankAccount account = new BankAccount();
+        account.deposit(50);
+        
+        // ACT & ASSERT
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            account.withdraw(100);
+        });
+        
+        assertEquals("Saldo tidak cukup!", exception.getMessage());
+    }
+}
+</code></pre>
+                
+
+                <hr style="margin-top: 40px; border: 0; border-top: 1px solid var(--color-border);">
+                <a href="blog.html" class="btn-primary" style="margin-top: 30px; font-size: 0.9rem;">&larr; Kembali ke Daftar Blog</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Hery Mangalik. Dibuat dengan sepenuh hati.</p>
+    </footer>
+
+</body>
+</html>

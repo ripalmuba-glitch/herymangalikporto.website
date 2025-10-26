@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cypress: Framework Testing End-to-End Modern - Blog UI/UX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">HM</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-header" style="padding: 180px 0 60px 0;">
+            <div class="container">
+                <p class="meta" style="color: var(--color-primary); font-family: var(--font-heading); font-weight: 600;">KATEGORI: AUTOMATION</p>
+                <h1 style="font-size: 3rem;">Cypress: Framework Testing End-to-End Modern</h1>
+            </div>
+        </section>
+
+        <section class="article-full">
+            <div class="article-full-content">
+                
+                <img src="image copy 7.png" alt="Header Artikel" class="header-image">
+                <p class="meta">Dipublikasikan pada 26 Oktober 2025</p>
+
+                <h3>Apa Itu Cypress?</h3>
+                <p>
+                    <strong>Cypress</strong> adalah framework testing modern yang dirancang khusus untuk menguji aplikasi web secara <em>end-to-end</em> (E2E). Cypress memungkinkan pengujian dilakukan seperti perilaku pengguna asli.
+                </p>
+                <p>
+                    Dengan instalasi yang mudah, Cypress menjadi alat yang andal untuk meningkatkan kualitas dan keandalan aplikasi web.
+                </p>
+
+                <h3>Perintah Dasar Cypress</h3>
+                <p>
+                    Cypress menggunakan sintaks yang sangat intuitif dan mudah dibaca (chainable commands) untuk berinteraksi dengan browser. Berikut adalah beberapa perintah dasarnya:
+                </p>
+                <ul>
+                    <li><strong>Membuka halaman web:</strong> <code>cy.visit('url')</code></li>
+                    <li><strong>Mengambil elemen berdasarkan selector:</strong> <code>cy.get('.class')</code> atau <code>cy.get('#id')</code></li>
+                    <li><strong>Mencari elemen berdasarkan teks:</strong> <code>cy.contains('Teks Tombol')</code></li>
+                    <li><strong>Mengetik ke input field:</strong> <code>cy.get('input').type('halo@email.com')</code></li>
+                    <li><strong>Klik tombol/link:</strong> <code>cy.get('button').click()</code></li>
+                    <li><strong>Mendapatkan URL aktif:</strong> <code>cy.url()</code></li>
+                </ul>
+
+                <h3>Keunggulan Cypress (Kenapa Berbeda?)</h3>
+                <p>
+                    Cypress sering dibandingkan dengan Selenium, namun ia memiliki beberapa keunggulan arsitektural yang membuatnya berbeda:
+                </p>
+                
+                <h4>1. Arsitektur Modern</h4>
+                <p>
+                    Tidak seperti Selenium yang menjalankan perintah di luar browser, Cypress berjalan *di dalam* browser, pada *run-loop* yang sama dengan aplikasi Anda. Ini memberinya kontrol penuh atas aplikasi, memungkinkannya mengeksekusi perintah lebih cepat dan lebih andal.
+                </p>
+
+                <h4>2. Test Runner Interaktif</h4>
+                <p>
+                    Ini adalah fitur unggulan Cypress. Saat kamu menjalankan tes, Cypress membuka jendela interaktif di mana kamu bisa melihat aplikasimu berjalan di satu sisi, dan log perintah tes di sisi lain. Kamu bisa mengklik setiap langkah perintah dan melihat *snapshot* aplikasi pada saat itu.
+                </p>
+
+                <h4>3. Time Travel</h4>
+                <p>
+                    Terkait dengan Test Runner, Cypress mengambil *snapshot* DOM pada setiap langkah perintah. Ini memungkinkanmu untuk "mundur" dan "maju" dalam waktu untuk melihat dengan tepat apa yang terjadi pada setiap tahap pengujian, membuat debugging menjadi sangat mudah.
+                </p>
+                
+                <h4>4. Automatic Waits</h4>
+                <p>
+                    Cypress secara otomatis menunggu elemen muncul di DOM sebelum menjalankan perintah (seperti <code>.click()</code> atau <code>.type()</code>). Ini menghilangkan kebutuhan untuk menambahkan "wait" atau "sleep" manual dalam skrip tes, yang merupakan sumber utama kegagalan (flakiness) pada tes Selenium.
+                </p>
+
+                <h3>Kesimpulan</h3>
+                <p>
+                    Cypress adalah framework testing modern yang digunakan untuk menguji aplikasi web secara end-to-end. Dengan fitur unggulan seperti Test Runner interaktif, Time Travel, dan automatic waits, Cypress memudahkan pengujian berbasis UI secara cepat dan efisien.
+                </p>
+                
+
+                <hr style="margin-top: 40px; border: 0; border-top: 1px solid var(--color-border);">
+                <a href="blog.html" class="btn-primary" style="margin-top: 30px; font-size: 0.9rem;">&larr; Kembali ke Daftar Blog</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Hery Mangalik. Dibuat dengan sepenuh hati.</p>
+    </footer>
+
+</body>
+</html>
