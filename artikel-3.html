@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studi Kasus UX: Alur Checkout - Blog UI/UX</title>
+    <title>Panduan Lengkap Membuat Testing Plan (IEEE 829) - Blog UI/UX</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 
     <header class="main-header">
         <div class="container">
-            <a href="index.html" class="logo">HERY MANGALIK</a>
+            <a href="index.html" class="logo">HM</a>
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -28,8 +28,8 @@
     <main>
         <section class="blog-header" style="padding: 180px 0 60px 0;">
             <div class="container">
-                <p class="meta" style="color: var(--color-primary); font-family: var(--font-heading); font-weight: 600;">KATEGORI: STUDI KASUS</p>
-                <h1 style="font-size: 3rem;">Studi Kasus UX: Merancang Ulang Alur Checkout E-Commerce</h1>
+                <p class="meta" style="color: var(--color-primary); font-family: var(--font-heading); font-weight: 600;">KATEGORI: MANAJEMEN TESTING</p>
+                <h1 style="font-size: 3rem;">Panduan Lengkap Membuat Testing Plan (IEEE 829)</h1>
             </div>
         </section>
 
@@ -37,74 +37,100 @@
             <div class="article-full-content">
                 
                 <img src="image copy 2.png" alt="Header Artikel" class="header-image">
-                <p class="meta">Dipublikasikan pada 15 Oktober 2025</p>
+                <p class="meta">Dipublikasikan pada 26 Oktober 2025</p>
 
-                <h3>Pendahuluan: Latar Belakang Proyek</h3>
+                <h3>Apa Itu Testing Plan?</h3>
                 <p>
-                    Studi kasus ini berfokus pada perancangan ulang (redesign) alur checkout untuk aplikasi e-commerce fiktif bernama "TokoKita". Alur checkout adalah salah satu bagian paling krusial dari e-commerce, namun seringkali menjadi tempat di mana pengguna paling banyak "jatuh" atau meninggalkan keranjang mereka.
-                </p>
-
-                <h3>Tantangan: Masalah yang Dihadapi</h3>
-                <p>
-                    Tim "TokoKita" datang dengan satu masalah besar: <strong>Tingkat Abandemen Keranjang (Cart Abandonment Rate) yang sangat tinggi, mencapai 75%</strong>. Ini berarti 3 dari 4 pengguna yang sudah memasukkan barang ke keranjang, gagal menyelesaikan pembayaran.
+                    <strong>Testing Plan (Rencana Pengujian)</strong> adalah dokumen panduan yang menjelaskan bagaimana proses pengujian perangkat lunak akan dilakukan. Dokumen ini berfungsi sebagai acuan resmi bagi tim penguji agar kegiatan pengujian lebih terarah dan konsisten.
                 </p>
                 <p>
-                    Tujuan proyek ini jelas: Mengidentifikasi masalah dalam alur checkout yang ada dan merancangnya ulang untuk mengurangi friksi, meningkatkan kepercayaan, dan pada akhirnya, menaikkan tingkat konversi penjualan.
+                    Di dalamnya memuat ruang lingkup pengujian, strategi/metodologi yang dipakai, sumber daya (tim, alat, data uji), serta jadwal pelaksanaan.
                 </p>
 
-                <h3>Proses Desain: Pendekatan Kami</h3>
+                <h3>Tujuan Testing Plan</h3>
                 <p>
-                    Kami menggunakan proses Design Thinking yang berpusat pada pengguna, yang terdiri dari 4 tahap utama:
-                </p>
-
-                <h4>Tahap 1: Riset & Analisis (Empathize & Define)</h4>
-                <p>
-                    Kami tidak bisa memperbaiki apa yang tidak kami pahami. Langkah pertama adalah mencari tahu *mengapa* pengguna pergi.
+                    Tujuan utama dari testing plan adalah untuk:
                 </p>
                 <ul>
-                    <li><strong>Analisis Data:</strong> Kami melihat data analytics dan menemukan bahwa 60% pengguna keluar dari halaman 'Pengisian Alamat'.</li>
-                    <li><strong>Usability Testing (Desain Lama):</strong> Kami meminta 5 pengguna untuk mencoba membeli barang menggunakan aplikasi yang ada. Kami mengamati mereka secara langsung.</li>
+                    <li>Menyediakan gambaran yang jelas tentang apa saja yang akan diuji dan bagaimana cara mengujinya.</li>
+                    <li>Menemukan sebanyak mungkin kesalahan.</li>
+                    <li>Menjamin perangkat lunak mencapai kualitas yang dapat diterima pengguna.</li>
+                    <li>Mengoptimalkan penggunaan waktu, biaya, dan tenaga.</li>
+                    <li>Memberikan dokumentasi yang bisa dijadikan referensi dan evaluasi pada proyek berikutnya.</li>
                 </ul>
 
-                <h4>Tahap 2: Temuan Utama ('Pain Points')</h4>
+                <h3>Komponen Testing Plan (Standar IEEE 829)</h3>
                 <p>
-                    Dari hasil riset, kami menemukan 3 masalah utama (pain points) yang membuat pengguna frustrasi:
+                    Sebuah rencana pengujian (Testing Plan) memiliki sejumlah komponen penting. Standar IEEE 829-1988 mendefinisikan berbagai komponen yang harus ada dalam sebuah dokumen test plan.
                 </p>
-                <ol>
-                    <li><strong>Paksaan Membuat Akun:</strong> Pengguna dipaksa untuk 'Login' atau 'Daftar' sebelum bisa checkout. Banyak pengguna baru yang tidak mau repot dan langsung keluar.</li>
-                    <li><strong>Formulir yang Mengerikan:</strong> Halaman pengisian alamat dan data diri digabung menjadi satu formulir yang sangat panjang dan mengintimidasi.</li>
-                    <li><strong>Biaya Tersembunyi:</strong> Biaya ongkos kirim dan admin baru muncul di halaman terakhir (pembayaran), membuat pengguna merasa "terjebak" atau "dibohongi".</li>
-                </ol>
 
-                <h4>Tahap 3: Ideasi & Solusi Desain (Ideate & Prototype)</h4>
-                <p>
-                    Berdasarkan temuan tersebut, kami merancang solusi untuk setiap masalah:
-                </p>
+                <h4>1. Test Plan Identifier</h4>
+                <p>Penanda unik untuk setiap dokumen test plan, biasanya berupa kode atau nomor versi. Fungsinya untuk memudahkan pengelolaan dokumen dan revisi.</p>
+
+                <h4>2. References</h4>
+                <p>Daftar dokumen, standar, atau sumber yang mendukung pembuatan test plan. Ini menjamin bahwa test plan konsisten dengan dokumen utama proyek dan selaras dengan kebutuhan aplikasi.</p>
+
+                <h4>3. Introduction</h4>
+                <p>Bagian pembuka yang berfungsi seperti executive summary. Ini menjelaskan tujuan, ruang lingkup, dan fokus pengujian serta memberi gambaran umum kepada stakeholder.</p>
+
+                <h4>4. Test Items</h4>
+                <p>Ini adalah komponen, fitur, modul, atau artefak perangkat lunak yang akan diuji. Sederhananya, ini adalah apa saja yang masuk dalam ruang lingkup pengujian.</p>
+
+                <h4>5. Software Risk Issues</h4>
+                <p>Identifikasi potensi risiko yang dapat muncul dari perangkat lunak atau proses pengujiannya. Yang termasuk di dalamnya antara lain: fitur yang kompleks, integrasi dengan software lain, atau kebutuhan yang samar.</p>
+
+                <h4>6. Features to be Tested</h4>
+                <p>Fitur atau fungsi perangkat lunak yang akan diuji dari sudut pandang pengguna. Fokusnya pada deskripsi penggunaan dan tingkat risiko yang terkait.</p>
+
+                <h4>7. Features not to be Tested</h4>
+                <p>Daftar fitur yang dikecualikan dari proses pengujian beserta alasannya. Biasanya ini adalah fitur yang sudah stabil atau tidak direncanakan untuk dirilis.</p>
+
+                <h4>8. Approach (Pendekatan)</h4>
+                <p>Pendekatan pengujian mendefinisikan strategi umum yang akan digunakan. Ini mencakup beberapa faktor:</p>
                 <ul>
-                    <li><strong>Solusi untuk Masalah #1:</strong> Menambahkan opsi <strong>"Lanjut sebagai Tamu" (Guest Checkout)</strong>. Pengguna bisa checkout tanpa membuat akun, dan kami menawarkan opsi membuat akun *setelah* pembayaran berhasil.</li>
-                    <li><strong>Solusi untuk Masalah #2:</strong> Memecah formulir menjadi 3 langkah logis (seperti *stepper*) yang jelas: <strong>1. Pengiriman</strong> -> <strong>2. Pembayaran</strong> -> <strong>3. Konfirmasi</strong>. Ini membuat prosesnya terasa lebih mudah dikelola.</li>
-                    <li><strong>Solusi untuk Masalah #3:</strong> Menampilkan estimasi ongkos kirim di halaman keranjang (sebelum checkout) dan menampilkan semua total biaya secara transparan di langkah pertama. Tidak ada lagi biaya kejutan.</li>
+                    <li><strong>Tipe Pengujian:</strong> Apakah akan dilakukan unit testing, integration testing, system testing, atau acceptance testing?</li>
+                    <li><strong>Teknik Pengujian:</strong> Akan menggunakan black-box, white-box, atau gray-box?</li>
+                    <li><strong>Metode Pengujian:</strong> Apakah akan dilakukan secara manual atau otomatis?</li>
+                    <li><strong>Tujuan Pengujian:</strong> Apa yang ingin dicapai? (validasi fungsionalitas, kinerja, atau keamanan)</li>
                 </ul>
 
-                <h4>Tahap 4: Validasi (Testing)</h4>
-                <p>
-                    Kami membuat prototipe interaktif dari alur checkout yang baru menggunakan Figma. Kami menguji ulang prototipe ini dengan 5 pengguna baru. Hasilnya, kelima pengguna berhasil menyelesaikan proses checkout tanpa kebingungan. Waktu rata-rata untuk checkout berkurang dari 3 menit menjadi 1 menit 15 detik.
-                </p>
-
-                <h3>Hasil & Kesimpulan</h3>
-                <p>
-                    Setelah alur checkout baru diimplementasikan oleh tim developer, "TokoKita" memantau hasilnya selama satu bulan.
-                </p>
-                <p>
-                    Hasilnya sangat signifikan:
-                </p>
+                <h4>9. Item Pass/Fail Criteria</h4>
+                <p>Ini adalah standar yang jelas dan terukur untuk menentukan apakah suatu fitur telah lulus atau gagal.</p>
                 <ul>
-                    <li>Tingkat Abandemen Keranjang (Cart Abandonment Rate) <strong>turun dari 75% menjadi 40%</strong>.</li>
-                    <li>Tingkat konversi penjualan <strong>meningkat sebesar 22%</strong>.</li>
+                    <li><strong>Pass Criteria (Kriteria Lulus):</strong> Semua test case utama berjalan sesuai harapan, tidak ada bug kritis yang ditemukan, dan fungsi bekerja sesuai spesifikasi.</li>
+                    <li><strong>Fail Criteria (Kriteria Gagal):</strong> Satu atau lebih test case gagal, ditemukan defect kritis, atau perilaku aplikasi tidak sesuai spesifikasi.</li>
                 </ul>
-                <p>
-                    Studi kasus ini membuktikan bahwa mendengarkan pengguna dan mengatasi 'pain points' mereka secara langsung dapat memberikan dampak bisnis yang nyata. Desain yang baik bukan hanya soal estetika, tapi soal memecahkan masalah.
-                </p>
+
+                <h4>10. Suspension Criteria & Resumption Requirements</h4>
+                <p><strong>Suspension Criteria</strong> mendefinisikan kondisi di mana pengujian harus dihentikan sementara, biasanya karena ditemukan masalah serius. <strong>Resumption Requirements</strong> menjelaskan kondisi yang harus dipenuhi (misalnya, bug sudah diperbaiki) sebelum pengujian dapat dilanjutkan kembali.</p>
+
+                <h4>11. Test Deliverables</h4>
+                <p>Dokumen, artefak, dan hasil nyata yang dihasilkan selama proses pengujian. Contohnya meliputi: test plan itu sendiri, test case, laporan bug, dan test summary report.</p>
+
+                <h4>12. Remaining Test Tasks</h4>
+                <p>Daftar pekerjaan pengujian yang masih belum selesai pada saat laporan status dibuat.</p>
+
+                <h4>13. Environmental Needs</h4>
+                <p>Spesifikasi lingkungan yang diperlukan agar pengujian valid, meliputi hardware, software/versi, data uji, akses, dan alat jaringan.</p>
+
+                <h4>14. Responsibilities</h4>
+                <p>Pembagian tanggung jawab yang menjelaskan siapa yang bertugas melakukan koordinasi, menulis, dan mengeksekusi test case, serta siapa yang berwenang mengambil keputusan.</p>
+
+                <h4>15. Staffing and Training Needs</h4>
+                <p>Kebutuhan personel dan pelatihan. Ini meliputi penentuan peran (Test Manager, tester, dll.) dan kompetensi yang dibutuhkan.</p>
+
+                <h4>16. Schedule</h4>
+                <p>Garis waktu (timeline) yang mencakup kapan pengujian dimulai, periode eksekusi, sesi retest, hingga rilis.</p>
+                
+                <h4>17. Planning Risks and Contingencies</h4>
+                <p>(Tidak dijelaskan detail di PDF, namun ini berisi rencana cadangan jika terjadi risiko dalam penjadwalan atau sumber daya).</p>
+
+                <h4>18. Approvals</h4>
+                <p>Untuk memastikan semua pihak yang berkepentingan (manajer proyek, manajer pengujian) telah menyetujui rencana tersebut. Bagian ini biasanya berisi nama, jabatan, dan tanda tangan.</p>
+
+                <h4>19. Glossary</h4>
+                <p>Daftar istilah teknis atau singkatan yang digunakan dalam dokumen beserta definisinya, untuk memastikan semua pihak memiliki pemahaman yang sama.</p>
+                
 
                 <hr style="margin-top: 40px; border: 0; border-top: 1px solid var(--color-border);">
                 <a href="blog.html" class="btn-primary" style="margin-top: 30px; font-size: 0.9rem;">&larr; Kembali ke Daftar Blog</a>
