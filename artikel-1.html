@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pentingnya User Research - Blog UI/UX</title>
+    <title>Strategi Testing: Fondasi Software Berkualitas - Blog UI/UX</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 
     <header class="main-header">
         <div class="container">
-            <a href="index.html" class="logo">HERY MANGALIK</a>
+            <a href="index.html" class="logo">HM</a>
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -28,8 +28,8 @@
     <main>
         <section class="blog-header" style="padding: 180px 0 60px 0;">
             <div class="container">
-                <p class="meta" style="color: var(--color-primary); font-family: var(--font-heading); font-weight: 600;">KATEGORI: UX RESEARCH</p>
-                <h1 style="font-size: 3rem;">Pentingnya User Research dalam Desain Produk</h1>
+                <p class="meta" style="color: var(--color-primary); font-family: var(--font-heading); font-weight: 600;">KATEGORI: TESTING DASAR</p>
+                <h1 style="font-size: 3rem;">Strategi Testing: Fondasi Software Berkualitas</h1>
             </div>
         </section>
 
@@ -37,57 +37,115 @@
             <div class="article-full-content">
                 
                 <img src="image.png" alt="Header Artikel" class="header-image">
-                <p class="meta">Dipublikasikan pada 25 Oktober 2025</p>
+                <p class="meta">Dipublikasikan pada 26 Oktober 2025</p>
 
-                <h3>1. Pengertian User Research (Riset Pengguna)</h3>
+                <h3>Apa Itu Testing?</h3>
                 <p>
-                    Secara sederhana, <strong>User Research</strong> (Riset Pengguna) adalah proses sistematis untuk memahami perilaku, kebutuhan, motivasi, dan 'pain points' (titik masalah) pengguna. Ini adalah fondasi dari seluruh proses desain UI/UX.
+                    Perangkat lunak (Software) dikembangkan melalui tahapan bertahap yang dikenal dengan <strong>Software Development Life Cycle (SDLC)</strong>. Testing adalah salah satu fase krusial dalam siklus ini.
                 </p>
                 <p>
-                    Bayangkan membangun sebuah rumah tanpa pernah berbicara dengan orang yang akan tinggal di dalamnya. Kamu mungkin akan membangun dapur yang terlalu kecil atau kamar tidur yang salah letak. User research mencegah hal ini terjadi dalam desain produk digital. Kita tidak lagi mendesain berdasarkan asumsi atau selera pribadi, melainkan berdasarkan <strong>data dan empati</strong> terhadap pengguna nyata.
+                    Secara definisi, <strong>Testing</strong> adalah proses mengevaluasi produk perangkat lunak untuk menemukan cacat dan memastikan produk bekerja sesuai kebutuhan, baik fungsional maupun non-fungsional.
                 </p>
 
-                <h3>2. Macam-Macam Metode User Research</h3>
+                <h3>Apa Tujuan dari Testing?</h3>
                 <p>
-                    Metode riset pengguna dapat dibagi menjadi dua kategori utama, yang masing-masing menjawab pertanyaan berbeda:
+                    Tujuan utama dari testing adalah untuk menemukan kesalahan atau cacat (bug) dalam perangkat lunak atau sistem dan memastikan kualitas sebelum produk dirilis.
+                </p>
+                <p>
+                    Tujuan-tujuan lainnya meliputi:
+                </p>
+                <ul>
+                    <li><strong>Verifikasi dan Validasi</strong>.</li>
+                    <li><strong>Mengurangi resiko kegagalan</strong>.</li>
+                    <li><strong>Meningkatkan kepercayaan stakeholder</strong>.</li>
+                    <li><strong>Menjamin keamanan</strong>.</li>
+                    <li><strong>Efisiensi biaya</strong> (semakin awal bug ditemukan, semakin murah perbaikannya).</li>
+                    <li><strong>Meningkatkan Pengalaman Pengguna (User Experience)</strong>.</li>
+                </ul>
+
+                <h3>Fase Testing dalam SDLC</h3>
+                <p>
+                    Dalam Software Development Life Cycle (SDLC), testing bukanlah satu-satunya fase. Ia adalah bagian dari siklus yang lebih besar:
+                </p>
+                <ol>
+                    <li><strong>Planning (Perencanaan)</strong></li>
+                    <li><strong>Analysis (Analisis)</strong></li>
+                    <li><strong>Design (Desain)</strong></li>
+                    <li><strong>Implementation (Implementasi/Coding)</strong></li>
+                    <li><strong>Testing & Integration (Pengujian & Integrasi)</strong></li>
+                    <li><strong>Maintenance (Pemeliharaan)</strong></li>
+                </ol>
+
+                <h3>Software Testing Life Cycle (STLC)</h3>
+                <p>
+                    Lebih dari sekadar satu fase, proses testing itu sendiri memiliki siklus hidup yang disebut <strong>Software Testing Life Cycle (STLC)</strong>. Ini adalah pendekatan sistematis untuk menguji perangkat lunak guna memastikan software tersebut memenuhi persyaratan dan bebas dari cacat. STLC mengikuti serangkaian langkah atau fase, di mana setiap fase memiliki tujuan dan hasil yang spesifik.
+                </p>
+                <p>
+                    Proses ini digunakan untuk memastikan bahwa software yang dibuat adalah software dengan kualitas terbaik, dapat diandalkan, dan memenuhi kebutuhan pengguna akhir (user).
                 </p>
                 
-                <h4>a. Metode Kualitatif (Menjawab "Mengapa" & "Bagaimana")</h4>
-                <p>Fokus pada pemahaman mendalam tentang perilaku dan motivasi. Data yang didapat bersifat deskriptif (bukan angka).</p>
+                <h4>Tahapan Kunci dalam STLC</h4>
                 <ul>
-                    <li><strong>Wawancara Mendalam (In-depth Interviews):</strong> Sesi tanya jawab 1-on-1 dengan pengguna untuk menggali pengalaman, perasaan, dan pendapat mereka secara detail. Contoh pertanyaan: "Ceritakan pengalaman terakhir Anda saat mencoba membeli tiket di aplikasi kami..."</li>
-                    <li><strong>Usability Testing:</strong> Mengamati pengguna saat mereka mencoba menggunakan produk atau prototipe kita untuk menyelesaikan tugas tertentu. Tujuannya adalah menemukan di mana mereka bingung, frustrasi, atau salah langkah.</li>
-                    <li><strong>Focus Group Discussion (FGD):</strong> Diskusi kelompok terpandu untuk memahami persepsi, opini, dan sikap sekelompok orang terhadap suatu konsep atau produk.</li>
+                    <li><strong>Test Planning (Perencanaan Tes):</strong> Membuat strategi pengujian, mengidentifikasi lingkungan pengujian, mengidentifikasi uji kasus, memperkirakan waktu dan biaya, mengidentifikasi hasil tes, menugaskan peran dan tanggung jawab, serta meninjau rencana testing.</li>
+                    <li><strong>Test Design (Desain Tes):</strong> Mengidentifikasi test case, menulis test case, membuat data dan skenario pengujian, mengidentifikasi hasil yang diharapkan, serta memperbarui dokumen Requirement Traceability Matrix.</li>
+                    <li><strong>Test Execution (Eksekusi Tes):</strong> Ini adalah saat pengujian sebenarnya dilakukan.</li>
                 </ul>
 
-                <h4>b. Metode Kuantitatif (Menjawab "Berapa Banyak" & "Berapa Sering")</h4>
-                <p>Fokus pada pengumpulan data numerik dan statistik dari sampel pengguna yang besar untuk mengidentifikasi pola dan tren.</p>
+                <h3>Jenis-Jenis Eksekusi Testing</h3>
+                <p>Proses eksekusi testing biasanya dibagi berdasarkan levelnya, dari yang terkecil hingga terbesar:</p>
                 <ul>
-                    <li><strong>Survei / Kuesioner:</strong> Menggunakan alat seperti Google Forms atau Typeform untuk menyebarkan serangkaian pertanyaan kepada banyak responden. Sangat baik untuk mengukur kepuasan atau mengumpulkan data demografis.</li>
-                    <li><strong>A/B Testing:</strong> Membandingkan dua versi desain (Versi A vs Versi B) secara langsung untuk melihat mana yang berkinerja lebih baik dalam mencapai tujuan tertentu (misalnya, tombol mana yang lebih banyak diklik).</li>
-                    <li><strong>Analisis Data (Analytics):</strong> Menganalisis data dari alat seperti Google Analytics atau Hotjar untuk melihat apa yang pengguna *lakukan* di website kita secara massal. Contoh: "Berapa banyak pengguna yang meninggalkan halaman keranjang belanja?"</li>
+                    <li><strong>Komponen Testing:</strong> Pengujian komponen-komponen program. Biasanya dilakukan oleh developer.</li>
+                    <li><strong>Integration Testing:</strong> Pengujian kelompok komponen-komponen yang terintegrasi untuk membentuk sub-sistem. Fokus pada keterhubungan antar sub-system.</li>
+                    <li><strong>System Testing:</strong> Pengujian terhadap sistem secara keseluruhan. Dilakukan oleh tim penguji yang independen dan berdasarkan spesifikasi sistem.</li>
+                    <li><strong>Acceptance Testing:</strong> Pengujian terakhir sebelum sistem dipakai oleh user. Seringkali melibatkan pengujian dengan data dari pengguna sistem.</li>
                 </ul>
 
-                <h3>3. Contoh Penerapan dalam Proyek (Studi Kasus)</h3>
+                <h3>Pelaporan & Analisis Testing</h3>
                 <p>
-                    Misalkan kita sedang mendesain ulang aplikasi e-commerce.
+                    Setelah pengujian selesai, laporan dibuat untuk mengevaluasi kualitas aplikasi. Laporan ini berisi:
                 </p>
-                <p>
-                    <strong>Asumsi Awal Tim:</strong> "Pengguna pasti ingin melihat banyak banner promo besar di halaman depan."
-                </p>
-                <p>
-                    <strong>Proses Riset:</strong>
-                    1.  <strong>Kuantitatif (Survei):</strong> Kita menyebar survei ke 1000 pengguna. Hasilnya: 70% pengguna mengatakan tujuan utama mereka membuka aplikasi adalah untuk "mencari barang spesifik," bukan "melihat promo."
-                    2.  <strong>Kualitatif (Usability Testing):</strong> Kita mengamati 5 pengguna. Kita melihat mereka kesulitan menemukan tombol 'Search' (pencarian) karena tertutup oleh banner promo.
-                </p>
-                <p>
-                    <strong>Hasil & Keputusan Desain:</strong> Berdasarkan data riset, kita mengubah desain. Alih-alih banner promo besar, kita memprioritaskan <strong>bar pencarian yang besar dan jelas</strong> di bagian atas halaman. Banner promo dipindahkan ke bawahnya. Hasilnya, tingkat keberhasilan pencarian produk naik 45% dan frustrasi pengguna berkurang.
-                </p>
+                <ul>
+                    <li><strong>Ringkasan hasil pengujian:</strong> Menyajikan jumlah kasus uji yang berhasil, gagal, atau belum dijalankan.</li>
+                    <li><strong>Identifikasi bug dan isu teknis:</strong> Mencatat kesalahan yang ditemukan, termasuk tingkat keparahan dan status perbaikannya.</li>
+                    <li><strong>Grafik dan data analitik:</strong> Menampilkan tren pengujian, seperti penurunan jumlah bug.</li>
+                    <li><strong>Rekomendasi perbaikan:</strong> Memberikan saran untuk peningkatan performa, keamanan, atau stabilitas.</li>
+                </ul>
 
-                <h3>4. Kesimpulan</h3>
+                <h3>Klasifikasi Software Testing</h3>
+                <p>Testing dapat diklasifikasikan berdasarkan beberapa kategori:</p>
+                
+                <h4>1. Berdasarkan Abstraksi (Level)</h4>
+                <ul>
+                    <li><strong>Unit Testing</strong></li>
+                    <li><strong>Integration Testing</strong></li>
+                    <li><strong>System/End-to-End Testing</strong></li>
+                    <li><strong>Acceptance Testing</strong></li>
+                </ul>
+                
+                <h4>2. Berdasarkan Fungsi</h4>
+                <ul>
+                    <li><strong>Fungsional Testing:</strong> Menguji apakah software berfungsi sesuai persyaratan fungsionalnya. Contoh: Verifikasi fungsi login, validasi transaksi pembayaran.</li>
+                    <li><strong>Non-Fungsional Testing:</strong> Menguji aspek performa, keamanan, reliabilitas. Fokus pada *bagaimana* sistem bekerja. Contoh: Menguji website saat ada flash sale, atau memastikan tampilan responsif.</li>
+                </ul>
+
+                <h4>3. Berdasarkan Domain</h4>
+                <ul>
+                    <li><strong>Performance Testing:</strong> Menguji kecepatan, responsivitas, dan stabilitas di bawah beban tertentu.</li>
+                    <li><strong>Security Testing:</strong> Mengidentifikasi celah keamanan dan melindungi data. Contoh: Menguji SQL injection atau XSS.</li>
+                    <li><strong>Usability Testing:</strong> Mengevaluasi kemudahan penggunaan perangkat lunak oleh pengguna akhir. Contoh: Memastikan pengguna mudah menemukan fitur atau memahami navigasi.</li>
+                </ul>
+
+                <h4>4. Berdasarkan Struktur (Visibility)</h4>
+                <ul>
+                    <li><strong>Black Box Testing:</strong> Tester tidak mengetahui struktur internal atau kode program. Fokus utama ada pada fungsi dan output. Kelebihannya adalah relevan dari perspektif end-user. Kekurangannya adalah sulit mendeteksi bug tersembunyi di logika program.</li>
+                    <li><strong>White Box Testing:</strong> Tester mengetahui struktur internal dan kode program. Fokus utama ada pada alur logika dan algoritma. Kelebihannya adalah dapat menemukan bug tersembunyi di dalam kode. Kekurangannya adalah membutuhkan pengetahuan mendalam tentang program.</li>
+                </ul>
+                
+                <h3>Kesimpulan</h3>
                 <p>
-                    User research bukanlah "nice to have" (tambahan), melainkan "must-have" (kewajiban). Ini adalah satu-satunya cara untuk memastikan bahwa produk yang kita desain benar-benar memecahkan masalah yang tepat untuk orang yang tepat. Riset yang baik menghemat waktu dan uang, serta menciptakan produk yang dicintai pengguna.
+                    Software testing adalah tahapan yang sangat penting untuk diperhatikan ketika mengembangkan sebuah software. Ini semua demi menghasilkan software yang baik, bebas dari bug, dan pada akhirnya, disukai oleh pengguna.
                 </p>
+                
 
                 <hr style="margin-top: 40px; border: 0; border-top: 1px solid var(--color-border);">
                 <a href="blog.html" class="btn-primary" style="margin-top: 30px; font-size: 0.9rem;">&larr; Kembali ke Daftar Blog</a>
